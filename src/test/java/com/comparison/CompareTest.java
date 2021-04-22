@@ -16,6 +16,15 @@ public class CompareTest {
     @Test
     public void givenFloat_ShouldReturnsLargest() {
         Comparison comparison = new Comparison();
-        float max = comparison.largest(4.1f, 5.6f, 2.3f);
+        Float max = comparison.largest(2.0f, 4.51f, 6.8f);
+        Assert.assertEquals(6.8f,max);
+
+    }
+    // UC3-To Validate given three String value gives maximum return true
+    @Test
+    public void givenString_ShouldReturnsLargest() {
+        Comparison comparison = new Comparison();
+        String max = comparison.largest("Ashish", "Rathod","Aarti");
+        Assert.assertEquals("Rathod",max);
     }
 }
